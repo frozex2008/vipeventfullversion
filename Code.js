@@ -15,8 +15,7 @@ const inviteLinks = [
     'https://invite.duolingo.com/family-plan/2-C4UH-V5AU-275H-V5KG'
 ];
 
-function openRandomLink() {
-    const randomIndex = Math.floor(Math.random() * inviteLinks.length);
-    const randomLink = inviteLinks.splice(randomIndex, 1)[0];
+getSuperButton.addEventListener('click', function() {
+    const randomLink = inviteLinks[Math.floor(Math.random() * inviteLinks.length)];
     window.open(randomLink, '_blank');
-}
+});
